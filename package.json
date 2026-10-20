@@ -1,0 +1,61 @@
+{
+  "name": "@fuhua-0623/dpapi-secrets",
+  "version": "0.1.0",
+  "description": "Encrypt and decrypt local secrets with the Windows Data Protection API (DPAPI) from Node.js, with no native dependencies.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/platform.test.mjs test/validation.test.mjs test/files.test.mjs test/roundtrip.test.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fuhua-0623/dpapi-secrets.git"
+  },
+  "homepage": "https://github.com/Fuhua-0623/dpapi-secrets#readme",
+  "bugs": {
+    "url": "https://github.com/Fuhua-0623/dpapi-secrets/issues"
+  },
+  "keywords": [
+    "dpapi",
+    "windows",
+    "secrets",
+    "credentials",
+    "encryption",
+    "decryption",
+    "data-protection",
+    "config",
+    "keytar-alternative",
+    "powershell"
+  ],
+  "author": "Fuhua-0623",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
