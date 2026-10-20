@@ -1,3 +1,5 @@
+<p align="center"><a href="./README.md">English</a> | <a href="./README.zh-CN.md">简体中文</a></p>
+
 # @fuhua-0623/dpapi-secrets
 
 [![npm version](https://img.shields.io/npm/v/@fuhua-0623/dpapi-secrets.svg)](https://www.npmjs.com/package/@fuhua-0623/dpapi-secrets)
